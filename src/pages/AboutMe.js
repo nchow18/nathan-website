@@ -1,12 +1,12 @@
 import React from 'react';
 
-function Home() {
+function AboutMe() {
 
   return (
     <>
-      Home
+      About Me
     </>
   )
 }
 
-export default Home;
+export default AboutMe;

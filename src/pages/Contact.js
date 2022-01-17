@@ -1,12 +1,12 @@
 import React from 'react';
 
-function Home() {
+function Contact() {
 
   return (
     <>
-      Home
+      Contact
     </>
   )
 }
 
-export default Home;
+export default Contact;

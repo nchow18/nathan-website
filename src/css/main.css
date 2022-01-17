@@ -1,0 +1,102 @@
+.bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+} 
+
+.page-container {
+  color: rgb(255,255,255,.83);
+  position: relative;
+  z-index: 2;
+}
+
+.page-arrow-left {
+  font-size: 2rem;
+  position: fixed;
+  height: 100vh;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+  z-index: 4;
+}
+
+.page-arrow-left > i, .page-arrow-right > i {
+  color: rgb(8, 8, 8);
+  background-color: rgb(75, 74, 74);
+  border-radius: 25px;
+  padding: 1.5px;
+}
+
+.page-arrow-left > i:hover, .page-arrow-right > i:hover {
+  background-color: rgb(184, 180, 180);
+}
+
+.page-arrow-right {
+  color: #FFFFFF;
+  font-size: 2rem;
+  position: fixed;
+  height: 100vh;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  z-index: 4;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  position: relative;
+  z-index: 5;
+}
+
+.body-content {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.social-icons {
+  padding: 2rem;
+  position: fixed;
+  left: 0;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.social-icons > i {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.bottom-links {
+  position: fixed;
+  bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 5;
+}
+
+.bottom-link {
+  padding: 1rem 3rem;
+  border-bottom: 1.75px solid rgb(48, 47, 47);
+}
+
+.bottom-link:hover {
+  border-bottom: 1.75px solid white;
+}
+
+.link-active {
+  border-bottom: 1.75px solid white;
+}
+
