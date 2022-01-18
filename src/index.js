@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './assets//fonts/louis_george_caf/Louis George Cafe.ttf';
 
 ReactDOM.render(
   <React.StrictMode>
