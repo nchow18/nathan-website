@@ -388,7 +388,7 @@ function Portfolio() {
         </div>
         <div className="portfolio-card" onClick={() => {SlideCard(3); setCurrentDot(3)}}>
           <div className="other-projects">
-            <span>Other awesome projects<i className="fas fa-arrow-circle-right"></i></span>
+            <span>Other Awesome Projects<i className="fas fa-arrow-circle-right"></i></span>
           </div>
         </div>
         <div className="portfolio-card" onClick={() => {SlideCard(4); setCurrentDot(4)}}>

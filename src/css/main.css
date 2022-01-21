@@ -478,11 +478,21 @@
   height: 400px;
   background-color: rgb(10, 10, 10);
   letter-spacing: 1.5px;
+  transition-duration: 1s;
+}
+
+.portfolio-card:hover {
+  filter: brightness(200%) !important;
+  transition-duration: 1s;
+}
+
+.portfolio-card:nth-child(5):hover {
+  filter: brightness(100%) !important;
 }
 
 .portfolio-card:nth-child(1) {
   box-shadow: 5px 5px 10px rgb(0,0,0,0.9);
-  filter: brightness(150%);
+  filter: brightness(200%);
 }
 
 .portfolio-card:nth-child(4) {
@@ -610,6 +620,7 @@
 .project-content {
   display: flex;
   flex-direction: column;
+  letter-spacing: 1px;
 }
 
 .project-content > span {
@@ -697,4 +708,8 @@
   font-size: 15px;
   color: rgb(255,255,255,0.5);
   background-color: rgb(97, 97, 97);
+}
+
+.card-dot:hover {
+  color: rgb(255,255,255,0.5);
 }
