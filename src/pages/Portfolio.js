@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 function Portfolio() {
 
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentDot, setCurrentDot] = useState(0);
 
   const topProjects = [
     {
@@ -185,6 +186,8 @@ function Portfolio() {
         }
       }
 
+      card[0].style.filter = 'blur(0px)';
+
       setCurrentSlide(0);
 
     } else if (position === 1) {
@@ -210,6 +213,8 @@ function Portfolio() {
       }
 
       card[0].style.left = (cardStd - (100)) + 'px';
+      card[0].style.filter = 'blur(1px)';
+      card[1].style.filter = 'blur(0px)';
 
       setCurrentSlide(1);
 
@@ -236,6 +241,8 @@ function Portfolio() {
 
       card[0].style.left = (cardStd - (200)) + 'px';
       card[0].style.transform = 'scale(0.7)';
+      card[1].style.filter = 'blur(1px)';
+      card[2].style.filter = 'blur(0px)';
       card[1].style.left = (cardStd - (450)) + 'px';
       card[1].style.transform = 'scale(0.8)';
 
@@ -267,6 +274,8 @@ function Portfolio() {
       card[1].style.transform = 'scale(0.7)';
       card[2].style.left = (cardStd - (725)) + 'px';
       card[2].style.transform = 'scale(0.8)';
+      card[2].style.filter = 'blur(1px)';
+      card[3].style.filter = 'blur(0px)';
       card[3].style.width = 225 + 'px';
       card[4].style.width = 600 + 'px';
       card[4].style.height = 'auto';
@@ -307,109 +316,117 @@ function Portfolio() {
     SlideCard(4)
   }
 
+  console.log(currentDot);
+
   return (
     <div className="portfolio-container">
 
-      <div className="portfolio-card" onClick={() => {SlideCard(0)}}>
-        <div className="portfolio-card-img">
-          <img alt="king" src={process.env.PUBLIC_URL + `/images/projects/kingseafood.jpg`}/>
-        </div>
-        <div className="portfolio-card-details">
-          <span>
-            A freshly designed web application for the company Kings Seafood 18, who required a seafood website that can allow customers to view, search and purchase their products, with options of either logging in or as a gueset for storing their items in a shopping cart
-          </span>
-          <div className="portfolio-card-links">
-            <i className="fab fa-github" onClick={() => {openLink(topProjects[0].github)}}></i>
-            <i className="far fa-folder-open" onClick={() => {openLink(topProjects[0].link)}}></i>
+      <div className="card-container">
+        <div className="portfolio-card" onClick={() => {SlideCard(0)}}>
+          <div className="portfolio-card-img">
+            <img alt="king" src={process.env.PUBLIC_URL + `/images/projects/kingseafood.jpg`}/>
+          </div>
+          <div className="portfolio-card-details">
+            <span>
+              A freshly designed web application for the company Kings Seafood 18, who required a seafood website that can allow customers to view, search and purchase their products, with options of either logging in or as a gueset for storing their items in a shopping cart
+            </span>
+            <div className="portfolio-card-links">
+              <i className="fab fa-github" onClick={() => {openLink(topProjects[0].github)}}></i>
+              <i className="far fa-folder-open" onClick={() => {openLink(topProjects[0].link)}}></i>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div className="portfolio-card" onClick={() => {SlideCard(1)}}>
-        <div className="portfolio-card-img">
-        <img alt="woof" src={process.env.PUBLIC_URL + `/images/projects/woof.jpg`}/>
-        </div>
-        <div className="portfolio-card-details">
-          <span>
-            A React App that is up to date with the latest trend of e-commerce product delivery. Consumers can request for a dog walker to walk their dog, and in turn, a registered Dog Walker will be chosen based on their availibility and rating. The top feature is live tracking of the Dog Walker using Mobile GPS
-          </span>
-          <div className="portfolio-card-links">
-            <i className="fab fa-github" onClick={() => {openLink(topProjects[1].github)}}></i>
-            <i className="far fa-folder-open" onClick={() => {openLink(topProjects[1].link)}}></i>
+        <div className="portfolio-card" onClick={() => {SlideCard(1)}}>
+          <div className="portfolio-card-img">
+          <img alt="woof" src={process.env.PUBLIC_URL + `/images/projects/woof.jpg`}/>
+          </div>
+          <div className="portfolio-card-details">
+            <span>
+              A React App that is up to date with the latest trend of e-commerce product delivery. Consumers can request for a dog walker to walk their dog, and in turn, a registered Dog Walker will be chosen based on their availibility and rating. The top feature is live tracking of the Dog Walker using Mobile GPS
+            </span>
+            <div className="portfolio-card-links">
+              <i className="fab fa-github" onClick={() => {openLink(topProjects[1].github)}}></i>
+              <i className="far fa-folder-open" onClick={() => {openLink(topProjects[1].link)}}></i>
+            </div>
           </div>
         </div>
-      </div> 
-      
-      <div className="portfolio-card" onClick={() => {SlideCard(2)}}>
-        <div className="portfolio-card-img">
-        <img alt="envoy" src={process.env.PUBLIC_URL + `/images/projects/envoy.jpg`}/>
-        </div>
-        <div className="portfolio-card-details">
-          <span>
-            A web application that allows users to add and comment on environmental products in the market
-          </span>
-          <div className="portfolio-card-links">
-            <i className="fab fa-github" onClick={() => {openLink(topProjects[2].github)}}></i>
-            <i className="far fa-folder-open" onClick={() => {openLink(topProjects[2].link)}}></i>
+        
+        <div className="portfolio-card" onClick={() => {SlideCard(2)}}>
+          <div className="portfolio-card-img">
+          <img alt="envoy" src={process.env.PUBLIC_URL + `/images/projects/envoy.jpg`}/>
+          </div>
+          <div className="portfolio-card-details">
+            <span>
+              A web application that allows users to add and comment on environmental products in the market
+            </span>
+            <div className="portfolio-card-links">
+              <i className="fab fa-github" onClick={() => {openLink(topProjects[2].github)}}></i>
+              <i className="far fa-folder-open" onClick={() => {openLink(topProjects[2].link)}}></i>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div className="portfolio-card" onClick={() => {SlideCard(3)}}>
-        <div className="other-projects">
-          <span>Other awesome projects<i className="fas fa-arrow-circle-right"></i></span>
+        <div className="portfolio-card" onClick={() => {SlideCard(3)}}>
+          <div className="other-projects">
+            <span>Other awesome projects<i className="fas fa-arrow-circle-right"></i></span>
+          </div>
         </div>
-      </div>
-
-      <div className="portfolio-card" onClick={() => {SlideCard(4)}}>
-        <div className="projects-container">
-          <div className="project-column">
-            {projectsCol1.map((proj) => (
-              <div key={proj.name} className="project-item">
-                <div className="project-hover">
-                <i onClick={() => {openLink(proj.github)}} className="fab fa-github"></i>
-                  <i onClick={() => {openLink(proj.link)}} className="far fa-folder-open"></i>
-                </div>                
-                <div className="project-content">
-                  <span>{proj.name}</span>
-                  <span>{proj.details}</span>
-                  <span>{proj.tech}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="project-column">
-            {projectsCol2.map((proj) => (
-              <div key={proj.name} className="project-item">
-                <div className="project-hover">
-                <i onClick={() => {openLink(proj.github)}} className="fab fa-github"></i>
-                  <i onClick={() => {openLink(proj.link)}} className="far fa-folder-open"></i>
-                </div>                
-                <div className="project-content">
-                  <span>{proj.name}</span>
-                  <span>{proj.details}</span>
-                  <span>{proj.tech}</span>
-                </div>              
-              </div>
-            ))}            
-          </div>
-          <div className="project-column">
-            {projectsCol3.map((proj) => (
-              <div key={proj.name} className="project-item">
-                <div className="project-hover">
+        <div className="portfolio-card" onClick={() => {SlideCard(4)}}>
+          <div className="projects-container">
+            <div className="project-column">
+              {projectsCol1.map((proj) => (
+                <div key={proj.name} className="project-item">
+                  <div className="project-hover">
                   <i onClick={() => {openLink(proj.github)}} className="fab fa-github"></i>
-                  <i onClick={() => {openLink(proj.link)}} className="far fa-folder-open"></i>
-                </div>                
-                <div className="project-content">
-                  <span>{proj.name}</span>
-                  <span>{proj.details}</span>
-                  <span>{proj.tech}</span>
-                </div>               
-              </div>
-            ))}            
-          </div>          
+                    <i onClick={() => {openLink(proj.link)}} className="far fa-folder-open"></i>
+                  </div>
+                  <div className="project-content">
+                    <span>{proj.name}</span>
+                    <span>{proj.details}</span>
+                    <span>{proj.tech}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="project-column">
+              {projectsCol2.map((proj) => (
+                <div key={proj.name} className="project-item">
+                  <div className="project-hover">
+                  <i onClick={() => {openLink(proj.github)}} className="fab fa-github"></i>
+                    <i onClick={() => {openLink(proj.link)}} className="far fa-folder-open"></i>
+                  </div>
+                  <div className="project-content">
+                    <span>{proj.name}</span>
+                    <span>{proj.details}</span>
+                    <span>{proj.tech}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="project-column">
+              {projectsCol3.map((proj) => (
+                <div key={proj.name} className="project-item">
+                  <div className="project-hover">
+                    <i onClick={() => {openLink(proj.github)}} className="fab fa-github"></i>
+                    <i onClick={() => {openLink(proj.link)}} className="far fa-folder-open"></i>
+                  </div>
+                  <div className="project-content">
+                    <span>{proj.name}</span>
+                    <span>{proj.details}</span>
+                    <span>{proj.tech}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>      
+      </div>
+      <div className="card-dots">
+        <i className={`far fa-circle card-dot ${currentDot === 0 && `active-dot`}`} onClick={() => {SlideCard(0); setCurrentDot(0)}}></i>
+        <i className={`far fa-circle card-dot ${currentDot === 1 && `active-dot`}`} onClick={() => {SlideCard(1); setCurrentDot(1)}}></i>
+        <i className={`far fa-circle card-dot ${currentDot === 2 && `active-dot`}`} onClick={() => {SlideCard(2); setCurrentDot(2)}}></i>
+        <i className={`far fa-circle card-dot ${currentDot === 3 && `active-dot`}`} onClick={() => {SlideCard(3); setCurrentDot(3)}}></i>
+        <i className={`far fa-circle card-dot ${currentDot === 4 && `active-dot`}`} onClick={() => {SlideCard(4); setCurrentDot(4)}}></i>
+      </div>    
 
     </div>
   )
