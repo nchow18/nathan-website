@@ -322,7 +322,7 @@ function Portfolio() {
     <div className="portfolio-container">
 
       <div className="card-container">
-        <div className="portfolio-card" onClick={() => {SlideCard(0)}}>
+        <div className="portfolio-card" onClick={() => {SlideCard(0); setCurrentDot(0)}}>
           <div className="portfolio-card-img">
             <img alt="king" src={process.env.PUBLIC_URL + `/images/projects/kingseafood.jpg`}/>
           </div>
@@ -336,7 +336,7 @@ function Portfolio() {
             </div>
           </div>
         </div>
-        <div className="portfolio-card" onClick={() => {SlideCard(1)}}>
+        <div className="portfolio-card" onClick={() => {SlideCard(1); setCurrentDot(1)}}>
           <div className="portfolio-card-img">
           <img alt="woof" src={process.env.PUBLIC_URL + `/images/projects/woof.jpg`}/>
           </div>
@@ -351,7 +351,7 @@ function Portfolio() {
           </div>
         </div>
         
-        <div className="portfolio-card" onClick={() => {SlideCard(2)}}>
+        <div className="portfolio-card" onClick={() => {SlideCard(2); setCurrentDot(2)}}>
           <div className="portfolio-card-img">
           <img alt="envoy" src={process.env.PUBLIC_URL + `/images/projects/envoy.jpg`}/>
           </div>
@@ -365,12 +365,12 @@ function Portfolio() {
             </div>
           </div>
         </div>
-        <div className="portfolio-card" onClick={() => {SlideCard(3)}}>
+        <div className="portfolio-card" onClick={() => {SlideCard(3); setCurrentDot(3)}}>
           <div className="other-projects">
             <span>Other awesome projects<i className="fas fa-arrow-circle-right"></i></span>
           </div>
         </div>
-        <div className="portfolio-card" onClick={() => {SlideCard(4)}}>
+        <div className="portfolio-card" onClick={() => {SlideCard(4); setCurrentDot(4)}}>
           <div className="projects-container">
             <div className="project-column">
               {projectsCol1.map((proj) => (
