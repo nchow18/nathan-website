@@ -186,7 +186,7 @@ function Portfolio() {
         }
 
         if (i === position) {
-          card[i].style.filter = 'brightness(150%) blur(0px)';
+          card[i].style.filter = 'brightness(200%) blur(0px)';
           card[i].style.boxShadow = '5px 5px 10px rgb(0,0,0,0.7)';
         } else {
           card[i].style.boxShadow = 'none';
@@ -218,7 +218,7 @@ function Portfolio() {
         }
 
         if (r === position) {
-          card[r].style.filter = 'brightness(150%) blur(0px)';
+          card[r].style.filter = 'brightness(200%) blur(0px)';
           card[r].style.boxShadow = '5px 5px 10px rgb(0,0,0,0.7)';
         } else {
           card[r].style.boxShadow = 'none';
@@ -252,7 +252,7 @@ function Portfolio() {
         }
 
         if (x === position) {
-          card[x].style.filter = 'brightness(150%) blur(0px)';
+          card[x].style.filter = 'brightness(200%) blur(0px)';
           card[x].style.boxShadow = '5px 5px 10px rgb(0,0,0,0.7)';
         } else {
           card[x].style.boxShadow = 'none';
