@@ -184,9 +184,15 @@ function Portfolio() {
           card[i].style.left = cardStd + 'px';
           card[i].style.animationDuration = '1s';
         }
-      }
 
-      card[0].style.filter = 'blur(0px)';
+        if (i === position) {
+          card[i].style.filter = 'brightness(150%) blur(0px)';
+          card[i].style.boxShadow = '5px 5px 10px rgb(0,0,0,0.7)';
+        } else {
+          card[i].style.boxShadow = 'none';
+          card[i].style.filter = 'brightness(100%)';
+        }
+      }
 
       setCurrentSlide(0);
 
@@ -210,11 +216,18 @@ function Portfolio() {
         } else {
           card[r].style.left = (cardStd - (cardWidth * position)) + 'px';
         }
+
+        if (r === position) {
+          card[r].style.filter = 'brightness(150%) blur(0px)';
+          card[r].style.boxShadow = '5px 5px 10px rgb(0,0,0,0.7)';
+        } else {
+          card[r].style.boxShadow = 'none';
+          card[r].style.filter = 'brightness(100%)';
+        }
       }
 
       card[0].style.left = (cardStd - (100)) + 'px';
       card[0].style.filter = 'blur(1px)';
-      card[1].style.filter = 'blur(0px)';
 
       setCurrentSlide(1);
 
@@ -237,12 +250,19 @@ function Portfolio() {
         } else {
           card[x].style.left = (cardStd - (cardWidth * position)) + 'px';
         }
+
+        if (x === position) {
+          card[x].style.filter = 'brightness(150%) blur(0px)';
+          card[x].style.boxShadow = '5px 5px 10px rgb(0,0,0,0.7)';
+        } else {
+          card[x].style.boxShadow = 'none';
+          card[x].style.filter = 'brightness(100%)';
+        }
       }
 
       card[0].style.left = (cardStd - (200)) + 'px';
       card[0].style.transform = 'scale(0.7)';
       card[1].style.filter = 'blur(1px)';
-      card[2].style.filter = 'blur(0px)';
       card[1].style.left = (cardStd - (450)) + 'px';
       card[1].style.transform = 'scale(0.8)';
 

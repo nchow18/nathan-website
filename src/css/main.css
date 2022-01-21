@@ -479,6 +479,11 @@
   background-color: rgb(10, 10, 10);
 }
 
+.portfolio-card:nth-child(1) {
+  box-shadow: 5px 5px 10px rgb(0,0,0,0.9);
+  filter: brightness(150%);
+}
+
 .portfolio-card:nth-child(4) {
   background-color: transparent;
   height: 100px;
