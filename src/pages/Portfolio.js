@@ -4,6 +4,37 @@ function Portfolio() {
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  const topProjects = [
+    {
+      name: 'King Seafood',
+      link: 'https://king-seafood-2021-1.herokuapp.com/products',
+      img: 'https://raw.githubusercontent.com/nchow18/profile-app/feature/new/src/assets/img/king.png',
+      github: 'https://github.com/nchow18/king-seafood',
+      label: 'king-port',
+      details: 'A freshly designed web application for the company Kings Seafood 18, who required a seafood website that can allow customers to view, search and purchase their products, with options of either logging in or as a gueset for storing their items in a shopping cart',
+      year: '2021'
+    },
+    {
+      name: 'Woof',
+      link: 'https://woof-2021.herokuapp.com',
+      img: 'https://raw.githubusercontent.com/nchow18/profile-app/feature/new/src/assets/img/woof.png',
+      github: 'https://github.com/woof-board/woof',
+      label: 'woof-port',
+      details: 'A React App that is up to date with the latest trend of e-commerce product delivery.  Consumers can request for a dog walker to walk their dog, and in turn, a registered Dog Walker will be chosen based on their availibility and rating.  The top feature is live tracking of the Dog Walker using Mobile GPS',
+      tech: 'test',
+      year: '2021'
+    },    
+    {
+      name: 'Envoy',
+      link: 'https://envoy-guide.herokuapp.com/',
+      img: 'https://raw.githubusercontent.com/nchow18/profile-app/feature/new/src/assets/img/envoy.png',
+      github: 'https://github.com/Envoy-products',
+      label: 'envoy-port',
+      details: 'A web application that allows users to add and comment on environmental products in the market',
+      year: '2021'
+    }
+  ]
+
   const projectsCol1 = [
     {
       name: 'Day Scheduler',
@@ -242,6 +273,11 @@ function Portfolio() {
 
       setCurrentSlide(3);
 
+      if (currentSlide < position) {
+        setTimeout(setPosition, 2000)
+      }
+
+
     } else if (position === 4) {
 
       for ( var t = 0; t < card.length; t++) {
@@ -267,50 +303,54 @@ function Portfolio() {
     window.open(link);
   }
 
+  function setPosition(index) {
+    SlideCard(4)
+  }
+
   return (
     <div className="portfolio-container">
 
       <div className="portfolio-card" onClick={() => {SlideCard(0)}}>
         <div className="portfolio-card-img">
-          IMG
+          <img alt="king" src={process.env.PUBLIC_URL + `/images/projects/kingseafood.jpg`}/>
         </div>
-        <div className="porfolio-card-details">
+        <div className="portfolio-card-details">
           <span>
-            DETAILS
+            A freshly designed web application for the company Kings Seafood 18, who required a seafood website that can allow customers to view, search and purchase their products, with options of either logging in or as a gueset for storing their items in a shopping cart
           </span>
           <div className="portfolio-card-links">
-            <i className="fab fa-github"></i>
-            <i className="far fa-folder-open"></i>
+            <i className="fab fa-github" onClick={() => {openLink(topProjects[0].github)}}></i>
+            <i className="far fa-folder-open" onClick={() => {openLink(topProjects[0].link)}}></i>
           </div>
         </div>
       </div>
 
       <div className="portfolio-card" onClick={() => {SlideCard(1)}}>
         <div className="portfolio-card-img">
-          IMG
+        <img alt="woof" src={process.env.PUBLIC_URL + `/images/projects/woof.jpg`}/>
         </div>
-        <div className="porfolio-card-details">
+        <div className="portfolio-card-details">
           <span>
-            DETAILS
+            A React App that is up to date with the latest trend of e-commerce product delivery. Consumers can request for a dog walker to walk their dog, and in turn, a registered Dog Walker will be chosen based on their availibility and rating. The top feature is live tracking of the Dog Walker using Mobile GPS
           </span>
           <div className="portfolio-card-links">
-            <i className="fab fa-github"></i>
-            <i className="far fa-folder-open"></i>
+            <i className="fab fa-github" onClick={() => {openLink(topProjects[1].github)}}></i>
+            <i className="far fa-folder-open" onClick={() => {openLink(topProjects[1].link)}}></i>
           </div>
         </div>
       </div> 
       
       <div className="portfolio-card" onClick={() => {SlideCard(2)}}>
         <div className="portfolio-card-img">
-          IMG
+        <img alt="envoy" src={process.env.PUBLIC_URL + `/images/projects/envoy.jpg`}/>
         </div>
-        <div className="porfolio-card-details">
+        <div className="portfolio-card-details">
           <span>
-            DETAILS
+            A web application that allows users to add and comment on environmental products in the market
           </span>
           <div className="portfolio-card-links">
-            <i className="fab fa-github"></i>
-            <i className="far fa-folder-open"></i>
+            <i className="fab fa-github" onClick={() => {openLink(topProjects[2].github)}}></i>
+            <i className="far fa-folder-open" onClick={() => {openLink(topProjects[2].link)}}></i>
           </div>
         </div>
       </div>

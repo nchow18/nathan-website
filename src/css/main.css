@@ -463,9 +463,17 @@
   position: relative;
   left: 650px;
   width: 300px;
-  border: 1px solid white;
   height: 400px;
-  background-color: black;
+  background-color: rgb(10, 10, 10);
+}
+
+.portfolio-card:nth-child(4) {
+  background-color: transparent;
+  height: 100px;
+}
+
+.portfolio-card:nth-child(5) {
+  background-color: transparent;
 }
 
 @keyframes ScaleLarge {
@@ -570,7 +578,7 @@
 .project-item {
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(to bottom right, rgb(61, 61, 61), black);
+  background-image: linear-gradient(to bottom right, rgb(48, 48, 48), rgb(10, 10, 10));
   padding: 1rem;
   font-size: 10px;
   text-align: center;
@@ -626,3 +634,28 @@
 /* .project-hover:hover + .project-content {
   filter: blur(1);
 } */
+
+.portfolio-card-img > img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.portfolio-card-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  font-size: 12px;
+  height: 100%;
+}
+
+.portfolio-card-links > i {
+  padding: 1rem 0.5rem;
+  font-size: 20px;
+}
+
+.portfolio-card-links > i:hover {
+  color: rgb(99, 99, 99);
+  transition-duration: 1s;
+}
