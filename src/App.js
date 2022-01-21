@@ -27,7 +27,7 @@ function App() {
       setPage(currentPage - 1);
     }
   }
-
+  
   return (
     <BrowserRouter>
       <img className="bg-image" alt='bg' src={process.env.PUBLIC_URL + `/images/bg.jpg`}/>
@@ -56,10 +56,10 @@ function App() {
           </Switch>
         </div>
         <div className="social-icons">
-          <i className="fab fa-instagram"></i>
-          <i className="fab fa-linkedin-in"></i>
-          <i className="fab fa-github"></i>
-          <i className="far fa-file-alt"></i>
+          <i className="fab fa-instagram" onClick={() => {window.open('https://www.instagram.com/_nathan_chow.json/')}}></i>
+          <i className="fab fa-linkedin-in" onClick={() => {window.open('https://www.linkedin.com/in/nathan-chow-1999701b9/')}}></i>
+          <i className="fab fa-github" onClick={() => {window.open('https://github.com/nchow18')}}></i>
+          <i className="far fa-file-alt" href={process.env.PUBLIC_URL + './Resume-Oct2021.pdf'}></i>
         </div>
         <div className="bottom-links-container">
           <div className="bottom-links">

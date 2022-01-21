@@ -314,6 +314,7 @@ function Portfolio() {
 
   function setPosition(index) {
     SlideCard(4)
+    setCurrentDot(4)
   }
 
   console.log(currentDot);
