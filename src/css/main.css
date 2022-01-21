@@ -450,3 +450,179 @@
   justify-content: center;
 }
 
+.portfolio-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+  position: relative;
+  left: 650px;
+  width: 300px;
+  border: 1px solid white;
+  height: 400px;
+  background-color: black;
+}
+
+@keyframes ScaleLarge {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes ScaleSmall {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.8);
+  }
+}
+
+@keyframes Left80 {
+  to {
+    left: 80%;
+  }
+}
+
+@keyframes Left60 {
+  from {
+    left: 80%;
+  }
+  to {
+    left: 60%;
+  }
+}
+
+@keyframes Left40 {
+  from {
+    left: 60%;
+  }
+  to {
+    left: 40%;
+  }
+}
+
+@keyframes Left20 {
+  from {
+    left: 40%;
+  }
+  to {
+    left: 20%;
+  }
+}
+
+@keyframes Left0 {
+  from {
+    left: 20%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
+@keyframes Right20 {
+  from {
+    left: 80%;
+  }
+  to {
+    right: 20%;
+    }
+}
+
+.other-projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.other-projects > span {
+  border-left: 2px solid white;
+  padding-left: 1rem;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.other-projects > span > i {
+  font-size: 25px;
+  margin-left: 1rem;
+}
+
+.projects-container {
+  display: flex;
+}
+
+.project-column {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to bottom right, rgb(61, 61, 61), black);
+  padding: 1rem;
+  font-size: 10px;
+  text-align: center;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-content > span {
+  padding: .25rem;
+}
+
+.project-content > span:nth-child(1) {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.project-hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+  transition-duration: 1.5s;
+  margin-bottom: 10px;
+}
+
+.project-hover > i {
+  margin: .5rem;
+  font-size: 20px;
+}
+
+.project-hover > i:hover {
+  color: rgb(99, 99, 99);
+  transition-duration: 1s;
+}
+
+.project-hover:hover {
+  color: white;
+  background-color: rgba(36, 36, 36, 0.5);
+  backdrop-filter: blur(3px);
+}
+
+/* .project-hover:hover + .project-content {
+  filter: blur(1);
+} */

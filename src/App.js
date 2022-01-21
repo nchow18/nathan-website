@@ -63,7 +63,7 @@ function App() {
         </div>
         <div className="bottom-links">
           {webLinks.map((link, index) => (
-            <div className={`bottom-link ${currentPage === index && `link-active`}`} onClick={() => {setPage(index)}}>
+            <div key={index} className={`bottom-link ${currentPage === index && `link-active`}`} onClick={() => {setPage(index)}}>
               {link}
             </div>
           ))}
