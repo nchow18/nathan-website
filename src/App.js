@@ -61,12 +61,14 @@ function App() {
           <i className="fab fa-github"></i>
           <i className="far fa-file-alt"></i>
         </div>
-        <div className="bottom-links">
-          {webLinks.map((link, index) => (
-            <div key={index} className={`bottom-link ${currentPage === index && `link-active`}`} onClick={() => {setPage(index)}}>
-              {link}
-            </div>
-          ))}
+        <div className="bottom-links-container">
+          <div className="bottom-links">
+            {webLinks.map((link, index) => (
+              <div key={index} className={`bottom-link ${currentPage === index && `link-active`}`} onClick={() => {setPage(index)}}>
+                {link}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </BrowserRouter>

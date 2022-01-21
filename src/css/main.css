@@ -83,18 +83,23 @@
   font-size: 1.5rem;
 }
 
-.bottom-links {
+.bottom-links-container {
   position: fixed;
   bottom: 3rem;
   display: flex;
-  justify-content: center;
   width: 100%;
+  justify-content: center;
   z-index: 5;
 }
 
-.bottom-link {
-  padding: 1rem 3rem;
+.bottom-links {
+  display: flex;
   border-bottom: 1.75px solid rgb(48, 47, 47);
+}
+
+.bottom-link {
+  margin: -2px 1.5rem;
+  padding: 1rem 1rem;
 }
 
 .bottom-link:hover {
