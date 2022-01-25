@@ -820,6 +820,10 @@
     margin-bottom: 1rem;
   }
 
+  .project-modal-card > span {
+    margin-bottom: 1rem;
+  }
+
   .project-modal-card > span:nth-child(1) {
     font-size: 13px;
     font-weight: bold;
