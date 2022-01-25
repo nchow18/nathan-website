@@ -462,6 +462,8 @@
   flex-direction: column;
   justify-content: center; 
   align-items: center;
+  position: relative;
+  top: -2rem;
 }
 
 .card-container {
@@ -678,8 +680,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
-  font-size: 12px;
+  padding: .5rem;
+  font-size: 11px;
   height: 100%;
 }
 
@@ -817,7 +819,7 @@
   }
 
   .project-item-mobile {
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
   }
 
   .project-modal-card > span {
@@ -827,6 +829,10 @@
   .project-modal-card > span:nth-child(1) {
     font-size: 13px;
     font-weight: bold;
+  }
+
+  .portfolio-card {
+    height: 325px;
   }
 
 }
