@@ -694,6 +694,8 @@
 .card-dots {
   display: flex;
   align-items: center;
+  position: fixed;
+  bottom: 7rem;
 }
 
 .card-dot {
