@@ -730,7 +730,11 @@
   transition-duration: 1s;
 }
 
-@media screen and ( max-width: 600px ) {
+.projects-container-mobile {
+  display: none;
+}
+
+@media screen and ( max-width: 851px ) {
   
   .portfolio-card {
     width: 200px;
@@ -780,8 +784,9 @@
   }
 
   .project-social > i {
-    margin-right: .5rem;
+    margin-left: 1rem;
     margin-bottom: .5rem;
+    font-size: 12px;
   }
 
   .projects-modal-container {
@@ -811,7 +816,7 @@
     padding: 3rem;
   }
 
-  .project-modal-card > span {
+  .project-item-mobile {
     margin-bottom: 1rem;
   }
 

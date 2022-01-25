@@ -9,8 +9,6 @@ function Portfolio() {
   const [cardStd, setStd] = useState();
   const [isModal, setModal] = useState(false);
 
-  console.log(currentProj);
-
   useEffect(() => {
 
     if (window.innerWidth < 600) {
