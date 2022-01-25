@@ -1,9 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Portfolio() {
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentDot, setCurrentDot] = useState(0);
+  const [cardWidth, setWidth] = useState();
+  const [currentProj, setCurrentProj] = useState()
+  const [cardStd, setStd] = useState();
+  const [isModal, setModal] = useState(false);
+
+  console.log(currentProj);
+
+  useEffect(() => {
+
+    if (window.innerWidth < 600) {
+
+      setWidth(200);
+      setStd(650);
+
+      console.log('less than 600px');
+
+    } else {
+
+      setWidth(325);
+      setStd(650)
+
+      console.log('greater than 600px');
+    }
+  },[])
 
   const topProjects = [
     {
@@ -164,10 +188,8 @@ function Portfolio() {
     // }
   ]
 
-  function SlideCard(position) {
 
-    const cardWidth = 325;
-    const cardStd = 650;
+  function SlideCard(position) {
 
     var card = document.getElementsByClassName('portfolio-card');
 
@@ -245,10 +267,22 @@ function Portfolio() {
           card[x].style.zindex = '1';
         }
 
-        if (currentSlide > position) {
-          card[x].style.left = (cardStd - (cardWidth * position)) + 'px';
+        if (window.innerWidth < 600) {
+
+          if (currentSlide > position) {
+            card[x].style.left = (cardStd - (cardWidth * 2.25)) + 'px';
+          } else {
+            card[x].style.left = (cardStd - (cardWidth * 2.25)) + 'px';
+          }
+
         } else {
-          card[x].style.left = (cardStd - (cardWidth * position)) + 'px';
+    
+          if (currentSlide > position) {
+            card[x].style.left = (cardStd - (cardWidth * position)) + 'px';
+          } else {
+            card[x].style.left = (cardStd - (cardWidth * position)) + 'px';
+          }
+
         }
 
         if (x === position) {
@@ -281,11 +315,25 @@ function Portfolio() {
           card[c].style.zindex = '1';
         }
 
-        if (currentSlide > position) {
-          card[c].style.left = (cardStd - (cardWidth * position)) + 'px';
+        if (window.innerWidth < 600) {
+          if (currentSlide > position) {
+            card[c].style.left = (cardStd - (cardWidth * 3.25)) + 'px';
+          } else {
+            card[c].style.left = (cardStd - (cardWidth * 3.25)) + 'px';
+          }
         } else {
-          card[c].style.left = (cardStd - (cardWidth * position)) + 'px';
+          if (currentSlide > position) {
+            card[c].style.left = (cardStd - (cardWidth * position)) + 'px';
+          } else {
+            card[c].style.left = (cardStd - (cardWidth * position)) + 'px';
+          }
         }
+
+        // if (currentSlide > position) {
+        //   card[c].style.left = (cardStd - (cardWidth * position)) + 'px';
+        // } else {
+        //   card[c].style.left = (cardStd - (cardWidth * position)) + 'px';
+        // }
       } 
 
       card[0].style.left = (cardStd - (175)) + 'px';
@@ -318,11 +366,25 @@ function Portfolio() {
           card[t].style.transitionDuration = '1s'
         }
 
-        if (currentSlide > position) {
-          card[t].style.left = (cardStd - (cardWidth * position)) + 'px';
+        if (window.innerWidth < 600) {
+          if (currentSlide > position) {
+            card[t].style.left = (cardStd - (cardWidth * 5.60)) + 'px';
+          } else {
+            card[t].style.left = (cardStd - (cardWidth * 5.60)) + 'px';
+          }
         } else {
-          card[t].style.left = (cardStd - (cardWidth * position)) + 'px';
+          if (currentSlide > position) {
+            card[t].style.left = (cardStd - (cardWidth * position)) + 'px';
+          } else {
+            card[t].style.left = (cardStd - (cardWidth * position)) + 'px';
+          }
         }
+
+        // if (currentSlide > position) {
+        //   card[t].style.left = (cardStd - (cardWidth * position)) + 'px';
+        // } else {
+        //   card[t].style.left = (cardStd - (cardWidth * position)) + 'px';
+        // }
       }
       setCurrentSlide(4);
     }
@@ -336,8 +398,6 @@ function Portfolio() {
     SlideCard(4)
     setCurrentDot(4)
   }
-
-  console.log(currentDot);
 
   return (
     <div className="portfolio-container">
@@ -397,7 +457,7 @@ function Portfolio() {
               {projectsCol1.map((proj) => (
                 <div key={proj.name} className="project-item">
                   <div className="project-hover">
-                  <i onClick={() => {openLink(proj.github)}} className="fab fa-github"></i>
+                    <i onClick={() => {openLink(proj.github)}} className="fab fa-github"></i>
                     <i onClick={() => {openLink(proj.link)}} className="far fa-folder-open"></i>
                   </div>
                   <div className="project-content">
@@ -412,7 +472,7 @@ function Portfolio() {
               {projectsCol2.map((proj) => (
                 <div key={proj.name} className="project-item">
                   <div className="project-hover">
-                  <i onClick={() => {openLink(proj.github)}} className="fab fa-github"></i>
+                    <i onClick={() => {openLink(proj.github)}} className="fab fa-github"></i>
                     <i onClick={() => {openLink(proj.link)}} className="far fa-folder-open"></i>
                   </div>
                   <div className="project-content">
@@ -439,6 +499,57 @@ function Portfolio() {
               ))}
             </div>
           </div>
+          <div className="projects-container-mobile">
+            {isModal === false && (
+              <div className="projects-column-mobile">
+                {projectsCol1.map((proj) => (
+                  <div key={proj.name} className="project-item-mobile">
+                    <div onClick={() => {setCurrentProj(proj); setModal(true) }} className="project-content-mobile">
+                      <span>{proj.name}</span>
+                    </div>
+                    <div className="project-social">
+                      <i onClick={() => {openLink(proj.github)}} className="fab fa-github"></i>
+                      <i onClick={() => {openLink(proj.link)}} className="far fa-folder-open"></i>
+                    </div>
+                  </div>
+                ))}
+                {projectsCol2.map((proj) => (
+                  <div key={proj.name} className="project-item-mobile">
+                    <div onClick={() => {setCurrentProj(proj); setModal(true) }} className="project-content-mobile">
+                      <span>{proj.name}</span>
+                    </div>
+                    <div className="project-social">
+                      <i onClick={() => {openLink(proj.github)}} className="fab fa-github"></i>
+                      <i onClick={() => {openLink(proj.link)}} className="far fa-folder-open"></i>
+                    </div>
+                  </div>
+                ))}
+                {projectsCol3.map((proj) => (
+                  <div key={proj.name} className="project-item-mobile">
+                    <div onClick={() => {setCurrentProj(proj); setModal(true) }} className="project-content-mobile">
+                      <span>{proj.name}</span>
+                    </div>
+                    <div className="project-social">
+                      <i onClick={() => {openLink(proj.github)}} className="fab fa-github"></i>
+                      <i onClick={() => {openLink(proj.link)}} className="far fa-folder-open"></i>
+                    </div>
+                  </div>
+                ))}                            
+              </div>              
+            )}
+
+          </div>
+          {isModal === true && (
+            <div className="projects-modal-container">
+              <i onClick={() => {setModal(false)}}className="fas fa-times"></i>
+              <div className="project-modal-card">
+                <span>{currentProj.name}</span>
+                <span>{currentProj.details}</span>
+                <span>{currentProj.tech}</span>
+              </div>
+            </div>
+          )}
+
         </div>
       </div>
       <div className="card-dots">
