@@ -721,6 +721,25 @@
 }
 
 @media screen and (max-width: 600px) {
+
+  .home-page > span:nth-child(1) {
+    position: relative;
+    left: 1rem;
+    bottom: 2rem;
+    font-size: 15px;
+  }
+  
+  .home-page > span:nth-child(2) {
+    font-size: 30px;
+  }
+  
+  .home-page > span:nth-child(3) {
+    font-size: 13px;
+    position: relative;
+    top: 2rem;
+    left: 5rem;
+  }
+
   .hexagon1 {
     width: 100px;
     height: 313px;
@@ -732,5 +751,39 @@
     padding: 5px;
     font-size: 10px;
     letter-spacing: 1.5px;
+  }
+
+  .portfolio-card {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+    position: relative;
+    left: 650px;
+    width: 200px;
+    height: 320px;
+    background-color: rgb(10, 10, 10);
+    letter-spacing: 1.5px;
+    transition-duration: 1s;
+  }
+
+  .projects-container-mobile {
+    padding-left: 12rem;
+  }
+
+  .project-item-mobile {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .project-social {
+    margin-left: 1rem;
+  }
+
+  .project-social i {
+    margin-right: 1rem;
+  }
+
+  .projects-container {
+    display: none;
   }
 }
