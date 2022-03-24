@@ -100,11 +100,7 @@
 .bottom-link {
   margin: -2px 1.5rem;
   padding: 1rem 1rem;
-<<<<<<< HEAD
   letter-spacing: 1.5px;
-=======
-  transition-duration: 1s;
->>>>>>> 80969aaf6353f8b81a4a4d3b1f52af60cc395827
 }
 
 .bottom-link:hover {
