@@ -42,7 +42,7 @@ function App() {
           <div>
             NC
           </div>
-          <div>
+          <div className="hire-me">
             HIRE ME
           </div>
         </div>

@@ -100,11 +100,16 @@
 .bottom-link {
   margin: -2px 1.5rem;
   padding: 1rem 1rem;
+<<<<<<< HEAD
   letter-spacing: 1.5px;
+=======
+  transition-duration: 1s;
+>>>>>>> 80969aaf6353f8b81a4a4d3b1f52af60cc395827
 }
 
 .bottom-link:hover {
   border-bottom: 1.75px solid white;
+  transition-duration: 1s;
 }
 
 .link-active {
@@ -461,6 +466,8 @@
   flex-direction: column;
   justify-content: center; 
   align-items: center;
+  position: relative;
+  top: -4rem;
 }
 
 .card-container {
@@ -476,7 +483,7 @@
   position: relative;
   left: 650px;
   width: 300px;
-  height: 400px;
+  height: 420px;
   background-color: rgb(10, 10, 10);
   letter-spacing: 1.5px;
   transition-duration: 1s;
@@ -677,8 +684,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
-  font-size: 12px;
+  padding: .5rem;
+  font-size: 11px;
   height: 100%;
 }
 
@@ -695,6 +702,8 @@
 .card-dots {
   display: flex;
   align-items: center;
+  position: fixed;
+  bottom: 7rem;
 }
 
 .card-dot {
