@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Main from './pages/Main';
+import Calorie from './pages/Calorie';
 import './css/main.css';
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
               prevPage={prevPage} 
               webLinks={webLinks}
               currentPage={currentPage}  />}/>
+            <Route exact path='/calorie' render={() => <Calorie />} />
           </Switch>
         </div>
         <div className="social-icons">
