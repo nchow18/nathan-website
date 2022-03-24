@@ -11,7 +11,7 @@ function App() {
     'CONTACT',
     'HOME',
     'ABOUT ME',
-    'PORFOLIO'
+    'PORFTOLIO'
   ]
 
   function nextPage() {
